@@ -8,7 +8,7 @@ def strip_punctuation(s):
 
     >>> strip_punctuation("#Amazing")
     Amazing
-    >>> strip_punctuation("#in.cred..ible!)
+    >>> strip_punctuation("#in.cred..ible!")
     incredible
     '''
     for char in punctuation_chars:
