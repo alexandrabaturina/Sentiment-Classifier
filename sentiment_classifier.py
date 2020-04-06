@@ -7,6 +7,13 @@ with open("positive_words.txt") as pos_f:
         if lin[0] != ';' and lin[0] != '\n':
             positive_words.append(lin.strip())
 
+# list of negative words to use
+negative_words = []
+with open("negative_words.txt") as pos_f:
+    for lin in pos_f:
+        if lin[0] != ';' and lin[0] != '\n':
+            negative_words.append(lin.strip())
+
 
 def strip_punctuation(s):
     '''
