@@ -6,7 +6,7 @@ with open("positive_words.txt") as pos_f:
     for lin in pos_f:
         if lin[0] != ';' and lin[0] != '\n':
             positive_words.append(lin.strip())
-            
+
 
 def strip_punctuation(s):
     '''
@@ -22,3 +22,17 @@ def strip_punctuation(s):
     for char in punctuation_chars:
         s = s.replace(char, '')
     return s
+
+
+def get_pos(s):
+    '''
+    (string) -> int
+
+    Return the number of occurrences of positive words in the string s
+    which represents one or more sentences.
+    '''
+    count = 0
+    for word in strip_punctuation(s.lower()).split():
+        if word in positive_words:
+            count +=1
+    return count
