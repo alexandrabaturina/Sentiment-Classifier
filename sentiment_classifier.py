@@ -43,3 +43,16 @@ def get_pos(s):
         if word in positive_words:
             count +=1
     return count
+
+
+def get_neg(s):
+    '''
+    (string) -> int
+    Return the number of occurrences of negative words in the string s
+    which represents one or more sentences.
+    '''
+    count = 0
+    for word in strip_punctuation(s.lower()).split():
+        if word in negative_words:
+            count +=1
+    return count
