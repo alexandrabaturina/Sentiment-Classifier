@@ -1,3 +1,6 @@
+twitter_file = open('project_twitter_data.csv', 'r')
+data_file = open('resulting_data.csv', 'w')
+
 punctuation_chars = ["'", '"', ",", ".", "!", ":", ";", '#', '@']
 
 # list of positive words to use
@@ -56,3 +59,26 @@ def get_neg(s):
         if word in negative_words:
             count +=1
     return count
+
+
+def write_to_file(file):
+    '''(file open to read)
+
+    Read, calculate, and write some data from file opened to read to other file.
+    '''
+    data_file.write("Number of Retweets, Number of Replies, Positive Score, \
+                    Negative Score, Net Score\n")
+    lines = file.readlines()[1:]
+    for line in lines:
+        # read line contents ignoring the header
+        l_contents = line.strip().split(',')
+        data_file.write("{}, {}, {}, {}, {} \n".format (
+                        l_contents[1],
+                        l_contents[2],
+                        get_pos(l_contents[0]),
+                        get_neg(l_contents[0]),
+                        (get_pos(l_contents[0]) - get_neg(l_contents[0]))))
+
+write_to_file(twitter_file)
+twitter_file.close()
+data_file.close()
