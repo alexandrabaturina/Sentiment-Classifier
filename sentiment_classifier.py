@@ -1,33 +1,27 @@
-twitter_file = open('project_twitter_data.csv', 'r')
-data_file = open('resulting_data.csv', 'w')
+twitter_file = open('files/project_twitter_data.csv', 'r')
+data_file = open('fies/resulting_data.csv', 'w')
 
 punctuation_chars = ["'", '"', ",", ".", "!", ":", ";", '#', '@']
 
 # list of positive words to use
 positive_words = []
 with open("positive_words.txt") as pos_f:
-    for lin in pos_f:
-        if lin[0] != ';' and lin[0] != '\n':
-            positive_words.append(lin.strip())
+    for line in pos_f:
+        if line[0] != ';' and line[0] != '\n':
+            positive_words.append(line.strip())
 
 # list of negative words to use
 negative_words = []
 with open("negative_words.txt") as pos_f:
-    for lin in pos_f:
-        if lin[0] != ';' and lin[0] != '\n':
-            negative_words.append(lin.strip())
+    for line in pos_f:
+        if line[0] != ';' and line[0] != '\n':
+            negative_words.append(line.strip())
 
 
 def strip_punctuation(s):
-    '''
-    (string) -> string
+    '''(string) -> string
 
     Return the string s with removed characters considered as punctuation chars.
-
-    >>> strip_punctuation("#Amazing")
-    Amazing
-    >>> strip_punctuation("#in.cred..ible!")
-    incredible
     '''
     for char in punctuation_chars:
         s = s.replace(char, '')
@@ -35,8 +29,7 @@ def strip_punctuation(s):
 
 
 def get_pos(s):
-    '''
-    (string) -> int
+    ''' (string) -> int
 
     Return the number of occurrences of positive words in the string s
     which represents one or more sentences.
@@ -49,8 +42,8 @@ def get_pos(s):
 
 
 def get_neg(s):
-    '''
-    (string) -> int
+    ''' (string) -> int
+    
     Return the number of occurrences of negative words in the string s
     which represents one or more sentences.
     '''
@@ -62,7 +55,7 @@ def get_neg(s):
 
 
 def write_to_file(file):
-    '''(file open to read)
+    ''' (file open to read)
 
     Read, calculate, and write some data from file opened to read to other file.
     '''
