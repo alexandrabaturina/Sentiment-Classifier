@@ -5,14 +5,14 @@ punctuation_chars = ["'", '"', ",", ".", "!", ":", ";", '#', '@']
 
 # list of positive words to use
 positive_words = []
-with open("positive_words.txt") as pos_f:
+with open('files/positive_words.txt') as pos_f:
     for line in pos_f:
         if line[0] != ';' and line[0] != '\n':
             positive_words.append(line.strip())
 
 # list of negative words to use
 negative_words = []
-with open("negative_words.txt") as pos_f:
+with open('files/negative_words.txt') as pos_f:
     for line in pos_f:
         if line[0] != ';' and line[0] != '\n':
             negative_words.append(line.strip())
@@ -43,7 +43,7 @@ def get_pos(s):
 
 def get_neg(s):
     ''' (string) -> int
-    
+
     Return the number of occurrences of negative words in the string s
     which represents one or more sentences.
     '''
