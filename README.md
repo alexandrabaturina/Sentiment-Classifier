@@ -31,3 +31,7 @@ To run **Sentiment Classifier** from the terminal, use the following command.
 ```sh
 $ python3 sentiment_classifier.py
 ```
+## Authors
+Alexandra Baturina
+
+The ```project_twitter_data.csv```, ```positive_words.txt```, and ```negative_words.txt``` files are downloaded from the [Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries/home/welcome) course materials on [Coursera](https://www.coursera.org/) platform.
