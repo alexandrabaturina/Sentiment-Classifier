@@ -1,6 +1,6 @@
 # Sentiment Classifier
 
-**Sentiment Classifier** application (```sentiment_classifier.py```) is a tool for analyzing tweet data and defining how positive or negative each tweet is. As a result of the application running, the ```resulting_data.csv``` file containing the following data is created.
+**Sentiment Classifier** application (```sentiment_classifier.py```) is a tool for analyzing tweet data and defining how positive or negative each tweet is. After running the application, the following data is written to the ```resulting_data.csv``` file.
 * *Number of retweets*
 * *Number of replies*
 * *Positive score* — how many happy words are in the tweet 
@@ -12,9 +12,9 @@
 ## Getting Started
 ### Prerequisites
 To use **Sentiment Classifier**, the following files are required.
-* **project_twitter_data.csv**: file containing semi-randomly generated data data is ```csv``` format.
-* **positive_words.txt**: file containing a list of words that express positive sentiment.
-* **negative_words.txt**: file containing a list of words that express negative sentiment.
+* ```project_twitter_data.csv``` contains semi-randomly generated tweet data is ```csv``` format
+* ```positive_words.txt``` contains a list of words that express positive sentiment
+* ```negative_words.txt``` contains a list of words that express negative sentiment
 
 The following folder structure should be created.
 ```sh
