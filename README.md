@@ -7,7 +7,7 @@
 * *Negative score* –  how many negative words are in the tweet
 * *Net score* – how positive or negative the tweet is overall
 
-**Sentiment Classifier** application is build as the final project of the [Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries/home/welcome) course on [Coursera](https://www.coursera.org/) platform.
+**Sentiment Classifier** application is built as the final project of the [Python Functions, Files, and Dictionaries](https://www.coursera.org/learn/python-functions-files-dictionaries/home/welcome) course on [Coursera](https://www.coursera.org/) platform.
 
 ## Getting Started
 ### Prerequisites
