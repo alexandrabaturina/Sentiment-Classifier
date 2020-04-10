@@ -64,13 +64,13 @@ def write_to_file(file):
     lines = file.readlines()[1:]
     for line in lines:
         # read line contents ignoring the header
-        l_contents = line.strip().split(',')
+        tweet_text, retweet_count, reply_count = line.strip().split(',')
         data_file.write("{}, {}, {}, {}, {} \n".format (
-                        l_contents[1],
-                        l_contents[2],
-                        get_pos(l_contents[0]),
-                        get_neg(l_contents[0]),
-                        (get_pos(l_contents[0]) - get_neg(l_contents[0]))))
+                        retweet_count, 
+                        reply_count,
+                        get_pos(tweet_text),
+                        get_neg(tweet_text),
+                        (get_pos(tweet_text) - get_neg(tweet_text))))
 
 write_to_file(twitter_file)
 twitter_file.close()
